@@ -77,6 +77,8 @@ npm run dev                     # starts at http://localhost:5173
 - Set all env vars from `backend/.env.example`
 - Start command: `uvicorn app.main:app --host 0.0.0.0 --port $PORT`
 - Set `ALLOWED_ORIGINS` to your Vercel frontend URL
+- For Render, prefer the repo `render.yaml` blueprint so the service builds from `backend/`
+- If you configure Render manually, set `Root Directory` to `backend`
 
 ### Frontend → Vercel / Netlify
 - Build command: `npm run build`
