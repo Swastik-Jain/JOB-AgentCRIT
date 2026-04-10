@@ -13,9 +13,8 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir --upgrade pip \
     && pip install --no-cache-dir -r requirements.txt
 
-COPY app ./app
-COPY .env.example ./.env.example
-COPY Procfile ./Procfile
+# Copy entire app (excluding what's in .dockerignore)
+COPY . .
 
 EXPOSE 8000
 
