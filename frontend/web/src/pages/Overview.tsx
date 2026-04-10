@@ -2,16 +2,14 @@ import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   Sparkles, Building2, MapPin, ExternalLink, Loader2,
-  FileText, Send, X, CheckCircle2, Clock,
+  Send, CheckCircle2, Clock,
   ChevronDown, ChevronUp, Target, TrendingUp, AlertCircle,
-  Play, Zap, ShieldCheck, RotateCcw, Bot, User, Globe,
+  Play, Zap, ShieldCheck, Bot, User, Globe,
   ClipboardList, PaperclipIcon, MailCheck, BadgeCheck,
 } from 'lucide-react';
 import api from '../lib/api';
 import { useAuth } from '../contexts/AuthContext';
 import { useTerminal } from '../contexts/TerminalContext';
-import { OptimizationGauge } from '../components/OptimizationGauge';
-import { OptimizationInsights } from '../components/OptimizationInsights';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 interface Job {

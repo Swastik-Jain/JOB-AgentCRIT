@@ -3,7 +3,7 @@ import { Terminal as TerminalIcon } from 'lucide-react';
 import { useTerminal } from '../../contexts/TerminalContext';
 
 export const Terminal: React.FC = () => {
-  const { logs, pushLog } = useTerminal();
+  const { logs } = useTerminal();
   const scrollRef = useRef<HTMLDivElement>(null);
 
   // Auto-scroll to latest log

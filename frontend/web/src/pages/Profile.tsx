@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import {
   User, Mail, Phone, GitBranch, Link2, Pencil, Check, X, Plus, Trash2,
   Briefcase, FolderGit2, GraduationCap, Zap, Loader2, Link,
@@ -8,7 +8,6 @@ import {
 import { useAuth } from '../contexts/AuthContext';
 import type { GithubRepo, ExperienceEntry, ProjectEntry, EducationEntry } from '../types';
 import { useTerminal } from '../contexts/TerminalContext';
-import api from '../lib/api';
 
 // ─── Small helpers ────────────────────────────────────────────────────────────
 const InputRow: React.FC<{
@@ -84,7 +83,7 @@ export const Profile: React.FC = () => {
   const { user, updateProfile } = useAuth();
   const { pushLog, clearLogs } = useTerminal();
 
-  const [verifiedRepos, setVerifiedRepos] = useState<{ repoName: string; comment: string; tech: string[] }[]>([]);
+  const [, setVerifiedRepos] = useState<{ repoName: string; comment: string; tech: string[] }[]>([]);
 
   // Editing flags
   const [editingSection, setEditingSection] = useState<string | null>(null);

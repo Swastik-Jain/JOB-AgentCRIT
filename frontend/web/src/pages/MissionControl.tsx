@@ -2,7 +2,7 @@ import React, { useEffect, useState, useCallback } from 'react';
 import {
   Rocket, Clock, CheckCircle2, AlertCircle,
   ShieldAlert, ShieldCheck, ShieldOff, Shield,
-  Eye, EyeOff, X, AlertTriangle, ExternalLink,
+  EyeOff, X, AlertTriangle, ExternalLink,
   Building2, MapPin, Zap, Info, ChevronDown, ChevronUp,
   Search, Filter,
 } from 'lucide-react';
